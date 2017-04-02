@@ -2,9 +2,11 @@
 
 <%= form_for(@task) do |f| %>
   <%= f.label :content, 'メッセージ' %>
-  <%= f.text_field :content %>
+  <%= f.text_field :content %><br>
 
-  <%= f.submit '投稿' %>
+  <%= f.label :status, 'ステータス' %>
+  <%= f.text_field :status %>
+  <%= f.submit '編集' %>
 <% end %>
 
 <%= link_to '一覧に戻る', tasks_path %>
